@@ -1,9 +1,11 @@
 package com.yaxu.learnspringframework.game;
 
+//PacmanGame
 public class GameRunner {
-	MarioGame game;
 	
-	public GameRunner(MarioGame game) {
+	private GamingConsole game;
+	
+	public GameRunner(GamingConsole game) {
 		this.game = game;
 	}
 
