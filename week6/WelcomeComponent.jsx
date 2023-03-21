@@ -11,7 +11,12 @@ function WelcomeComponent() {
         console.log('called')
         
 
-        axios.get('http://localhost:8080/hello-world')
+        // axios.get('http://localhost:8080/hello-world')
+        //     .then( (response) => successfulResponse(response) )
+        //     .catch ( (error) => errorResponse(error) )
+        //     .finally ( () => console.log('cleanup') )
+
+        retrieveHelloWorldBean()
             .then( (response) => successfulResponse(response) )
             .catch ( (error) => errorResponse(error) )
             .finally ( () => console.log('cleanup') )
@@ -20,8 +25,8 @@ function WelcomeComponent() {
 
     function successfulResponse(response) {
         console.log(response)
-        setMessage(response.data)
-        //setMessage(response.data.message)
+        //setMessage(response.data)
+        setMessage(response.data.message)
     }
 
     function errorResponse(error) {
